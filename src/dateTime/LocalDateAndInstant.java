@@ -9,10 +9,14 @@ import java.util.Date;
 public class LocalDateAndInstant {
     public static void main(String[] args) {
         /**
+         * 참고(https://stackoverflow.com/questions/32437550/whats-the-difference-between-instant-and-localdatetime)
          * Date는 1970/1/1 부터 현재 시간까지의 초를 계산하여 반환한다.
+         *
          * 오프셋, UTC, GMT (https://meetup.nhncloud.com/posts/125)
          * LocalDateTime은 타임존을 가지고 있지 않다. 오프셋과 표준시와 같은 추가 정보가 제공되지 않는 한 타임라인의 한 특정 지점(Instant)을 나타 낼 수 없다.
-         * Instant는 UTC 타임라인의 한 순간(moment)을 나타낸다. 1970년 UTC의 첫 번째 모멘트의 발생 이후 nano초 동안의 시간입니다.
+         * GMT가 다른 지역에서 LocalDateTime을 맞추려면 OffsetDateTime 혹은 ZonedDateTime이 있어야한다.
+         * Instant는 UTC 타임라인의 한 순간(moment)을 나타낸다. 1970년 UTC의 첫 번째 모멘트의 발생 이후 nano초 동안의 시간을 나타낸다.
+         * UNIX TimeStamp는 2038년 이후로는 사용할 수 없기 때문에 고안된 것이 Instant이다(Java 8 이후)
          */
 
         LocalDateTime now = LocalDateTime.now();
