@@ -11,7 +11,7 @@ public class FloatingPoint {
         double var3 = 1.264;
         double var4 = 1.354;
 
-        float sum1 = var1 + var1;
+        float sum1 = var1 + var2;
         System.out.println("float => " + sum1);  //float => 2.65
 
         double sum2 = var3 + var4;
